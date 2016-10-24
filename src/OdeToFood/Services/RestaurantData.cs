@@ -11,6 +11,7 @@ namespace OdeToFood.Services
         IEnumerable<Restaurant> GetAll();
         Restaurant Get(int id);
         Restaurant Add(Restaurant newRestaurant);
+        void Commit();
     }
 
     public class InMemoryRestaurantData : IRestaurantData
@@ -43,6 +44,11 @@ namespace OdeToFood.Services
             _restaurants.Add(newRestaurant);
 
             return newRestaurant;
+        }
+
+        public void Commit()
+        {
+            // no op
         }
     }
 }

@@ -1,8 +1,11 @@
-﻿@using OdeToFood.Entities
-@model Restaurant
+﻿@model Restaurant
+
+@{
+    ViewBag.Title = "Create";
+}
 
 <div>
-    <h1>Create</h1>
+    <h1>@ViewBag.Title</h1>
     <div>
         @using (Html.BeginForm())
         {
